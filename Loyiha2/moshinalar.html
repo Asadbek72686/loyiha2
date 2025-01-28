@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Эффект увеличения и рамки</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: Arial, sans-serif;
+            background-color: #141218;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+
+        .image-container {
+            position: relative;
+            overflow: hidden;
+            border-radius: 15px;
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+        }
+
+        .image-container img {
+            width: 350px;
+            height: 250px;
+            object-fit: cover;
+            transition: transform 0.4s ease;
+        }
+
+        .image-container:hover {
+            background-color: #222;
+            transform: scale(1.02); /* Легкое увеличение контейнера */
+            box-shadow: 0 6px 15px rgba(0, 0, 0, 0.7);
+        }
+
+        .image-container:hover img {
+            transform: scale(1.15); /* Увеличение самого изображения */
+        }
+
+        .image-container:hover::after {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            border: 3px solid #ff375f; /* Эффект рамки */
+            border-radius: 15px;
+            box-sizing: border-box;
+            opacity: 1;
+        }
+    </style>
+</head>
+<body>
+    <div class="image-container">
+        <img src="https://via.placeholder.com/350x250" alt="Пример изображения">
+    </div>
+</body>
+</html>

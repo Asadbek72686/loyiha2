@@ -1,0 +1,76 @@
+/* Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+body {
+    background-color: #161418; /* Qora fon */
+    color: #eee;
+}
+
+/* Navbar */
+
+
+.navbar .logo {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: #eee;
+    cursor: pointer;
+    transition: color 0.3s;
+}
+
+.navbar .logo:hover {
+    color: #ee83e5; /* Logo hover rangi */
+}
+
+.nav-links {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+}
+
+.nav-links li a {
+    text-decoration: none;
+    color: #a89ec9;
+    font-size: 1rem;
+    transition: color 0.3s, transform 0.3s;
+}
+
+.nav-links li a:hover {
+    color: #ee83e5;
+    transform: scale(1.1);
+}
+
+
+
+.search-box input {
+    padding: 8px 15px;
+    border: 1px solid #ffffff22;
+   
+    background-color: #282c34;
+    color: #eee;
+    outline: none;
+    transition: border 0.3s;
+}
+
+.search-box input:focus {
+    border-color: #ee83e5;
+}
+
+.search-box button {
+    padding: 8px 15px;
+    background-color: red;
+    color: #fff;
+    border: none;
+   
+    cursor: pointer;
+    transition: background 0.3s, transform 0.3s;
+}
+
+.search-box button:hover {
+    background-color: #a86bb9;
+    transform: scale(1.05);
+}
